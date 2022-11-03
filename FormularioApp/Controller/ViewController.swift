@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewConfirmation: UIView!
     @IBOutlet weak var viewLogo: UIView!
     @IBOutlet weak var buttonConfirm: UIButton!
+    @IBOutlet var textFields: [UITextField]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonConfirm(_ sender: UIButton) {
+        let textFieldsAreFilled = ValidateForm().checkTextFieldsFilled(textFields: textFields)
+        if textFieldsAreFilled {
+            let alert = ValidateForm().displaysFilledTextFieldsNotification(title: "Parabéns", message: "Compra realizada com suceso")
+            present(alert, animated: true, completion: nil)
+        } else {
+            let alert = ValidateForm().displaysFilledTextFieldsNotification(title: "Atenção", message: "Preencha corretamente todos os campos")
+            present(alert, animated: true, completion: nil)
+        }
     }
 }
 
