@@ -13,18 +13,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FormularioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1116"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1172"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-3m-Z3l">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="kOg-qe-4mN"/>
+                                    <constraint firstAttribute="height" constant="34" id="kOg-qe-4mN"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="La0-Xr-Trz">
-                                <rect key="frame" x="0.0" y="36" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="34" width="414" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keller ingressos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYP-c1-HU2">
                                         <rect key="frame" x="96" y="29" width="222" height="42"/>
@@ -41,16 +41,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações da sua compra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-Ii-iq0">
-                                <rect key="frame" x="91" y="151" width="232.5" height="25.5"/>
+                                <rect key="frame" x="91" y="149" width="232.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVd-gr-jzq">
-                                <rect key="frame" x="20" y="191.5" width="374" height="890.5"/>
+                                <rect key="frame" x="20" y="189.5" width="374" height="948.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-LO-0va">
-                                        <rect key="frame" x="0.0" y="1" width="374" height="1051"/>
+                                        <rect key="frame" x="0.0" y="1" width="374" height="1061"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcH-33-GPa">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="5"/>
@@ -71,7 +71,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço: Avenida dos Sistemas, 1222 - Aclimação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-QN-ZXp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço: Avenida dos Sistemas, 1222 - Aclimação" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-QN-ZXp">
                                                 <rect key="frame" x="0.0" y="174" width="374" height="21"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="15"/>
                                                 <nil key="textColor"/>
@@ -247,27 +247,34 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxl-E9-OlZ">
                                                 <rect key="frame" x="0.0" y="970" width="374" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12x R$ 16.58 (ou R$ 199,00 à vista)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Els-ak-upa">
-                                                        <rect key="frame" x="0.0" y="6.5" width="374" height="25.5"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12x R$ 16.58 (ou R$ 199,00 à vista)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Els-ak-upa">
+                                                        <rect key="frame" x="51" y="7.5" width="272" height="25.5"/>
                                                         <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.54117647058823526" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="8Zy-yN-2RI"/>
+                                                    <constraint firstItem="Els-ak-upa" firstAttribute="centerX" secondItem="fxl-E9-OlZ" secondAttribute="centerX" id="aL5-yI-FVY"/>
+                                                    <constraint firstItem="Els-ak-upa" firstAttribute="centerY" secondItem="fxl-E9-OlZ" secondAttribute="centerY" id="ghT-tZ-2F6"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siz-H1-5nV">
-                                                <rect key="frame" x="0.0" y="1016" width="374" height="35"/>
-                                                <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="1016" width="374" height="45"/>
+                                                <color key="backgroundColor" red="1" green="0.54117647059999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="cxy-0E-WtF"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Comprar">
                                                     <fontDescription key="titleFontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonConfirm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABb-CE-ynP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -298,14 +305,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zVd-gr-jzq" secondAttribute="trailing" constant="20" id="vDC-hl-PWu"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1116"/>
+                    <size key="freeformSize" width="414" height="1172"/>
                     <connections>
+                        <outlet property="buttonConfirm" destination="siz-H1-5nV" id="cUC-k1-HEu"/>
                         <outlet property="imageBanner" destination="OCY-2U-Eoh" id="084-M8-uYj"/>
+                        <outlet property="viewConfirmation" destination="fxl-E9-OlZ" id="1sJ-wI-mkr"/>
+                        <outlet property="viewLogo" destination="La0-Xr-Trz" id="rLY-jR-yKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="118.52678571428571"/>
+            <point key="canvasLocation" x="34.782608695652179" y="137.27678571428569"/>
         </scene>
     </scenes>
     <resources>
@@ -313,6 +323,9 @@
         <image name="robocup" width="951" height="534"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
