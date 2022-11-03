@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CPF_CNPJ_Validator
 
 class ViewController: UIViewController {
     
@@ -34,7 +33,9 @@ class ViewController: UIViewController {
     
     @IBAction func buttonConfirm(_ sender: UIButton) {
         let textFieldsAreFilled = ValidateForm().checkTextFieldsFilled(textFields: textFields)
-        if textFieldsAreFilled {
+        let textFieldsAreValid = ValidateForm().checkTextFieldsValid(listOfTextFields: textFields)
+        
+        if textFieldsAreFilled && textFieldsAreValid {
             let alert = ValidateForm().displaysFilledTextFieldsNotification(title: "Parabéns", message: "Compra realizada com suceso")
             present(alert, animated: true, completion: nil)
         } else {

@@ -50,7 +50,6 @@
 				6BF9E7B3C9E04A6A2F18F73A /* Pods-FormularioApp.debug.xcconfig */,
 				58AA401CF740D985E861A096 /* Pods-FormularioApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,11 +82,11 @@
 		D8C2C5092913FEE0003E5C2C /* FormularioApp */ = {
 			isa = PBXGroup;
 			children = (
-				D8C2C52029142428003E5C2C /* Model */,
-				D8C2C5212914243F003E5C2C /* Controller */,
 				D8C2C50A2913FEE0003E5C2C /* AppDelegate.swift */,
 				D8C2C50C2913FEE0003E5C2C /* SceneDelegate.swift */,
 				D8C2C5102913FEE0003E5C2C /* Main.storyboard */,
+				D8C2C52029142428003E5C2C /* Model */,
+				D8C2C5212914243F003E5C2C /* Controller */,
 				D8C2C5132913FEE1003E5C2C /* Assets.xcassets */,
 				D8C2C5152913FEE1003E5C2C /* LaunchScreen.storyboard */,
 				D8C2C5182913FEE1003E5C2C /* Info.plist */,
