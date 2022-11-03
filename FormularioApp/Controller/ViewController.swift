@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CPF_CNPJ_Validator
 
 class ViewController: UIViewController {
     

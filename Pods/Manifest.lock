@@ -1,0 +1,16 @@
+PODS:
+  - CPF-CNPJ-Validator (1.0.2)
+
+DEPENDENCIES:
+  - CPF-CNPJ-Validator
+
+SPEC REPOS:
+  trunk:
+    - CPF-CNPJ-Validator
+
+SPEC CHECKSUMS:
+  CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
+
+PODFILE CHECKSUM: af6ca1284f6dd4e814e9c96e6fc6347c0cdcfb3b
+
+COCOAPODS: 1.11.3
