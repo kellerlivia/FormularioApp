@@ -7,13 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoSelecionado {
     
     @IBOutlet weak var imageBanner: UIImageView!
     @IBOutlet weak var viewConfirmation: UIView!
     @IBOutlet weak var viewLogo: UIView!
     @IBOutlet weak var buttonConfirm: UIButton!
     @IBOutlet var textFields: [UITextField]!
+    @IBOutlet weak var scrollViewPrincipal: UIScrollView!
+    
+    var pickerViewMes = PickerViewMes()
+    var pickerViewAno = PickerViewAno()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,15 @@ class ViewController: UIViewController {
         
         self.viewLogo.layer.cornerRadius = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 20 : 20
         self.viewLogo.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(aumentarScrollView(notification:)), name: UIApplication.keyboardWillChangeFrameNotification, object: nil)
+        
+        pickerViewMes.delegate = self
+        pickerViewAno.delegate = self
+    }
+    
+    @objc func aumentarScrollView(notification: Notification) {
+        self.scrollViewPrincipal.contentSize = CGSize(width: self.scrollViewPrincipal.frame.width, height: self.scrollViewPrincipal.frame.height + 750)
     }
     
     @IBAction func buttonConfirm(_ sender: UIButton) {
@@ -54,7 +67,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func textFieldCepUpdateValue(_ sender: UITextField) {
         LocalizacaoConsultaAPI().consultaViaCepAPI(cep: sender.text!, sucesso: { (localizacao) in
             self.buscaTextField(tipoDeTextField: .endereco, completion: { (textFieldEndereco) in
@@ -69,6 +81,33 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func textFieldMesEntrouEmFoco(_ sender: UITextField) {
+        let pickerView = UIPickerView()
+        pickerView.delegate = pickerViewMes
+        pickerView.dataSource = pickerViewMes
+        
+        sender.inputView = pickerView
+    }
     
+    func mesSelecionado(mes: String) {
+        self.buscaTextField(tipoDeTextField: .mesDeVencimento) { textFieldMes in
+            textFieldMes.text = mes
+        }
+    }
+    
+    @IBAction func textFieldAnoEntrouEmFoco(_ sender: UITextField) {
+        let pickerView = UIPickerView()
+        pickerView.delegate = pickerViewAno
+        pickerView.dataSource = pickerViewAno
+        
+        sender.inputView = pickerView
+
+    }
+    
+    func anoSelecionado(ano: String) {
+        self.buscaTextField(tipoDeTextField: .anoDeVencimento) { textFieldAno in
+            textFieldAno.text = ano
+        }
+    }
 }
 

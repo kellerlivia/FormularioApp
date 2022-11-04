@@ -16,6 +16,8 @@
 		D8C2C5232914248B003E5C2C /* ValidateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2C5222914248B003E5C2C /* ValidateForm.swift */; };
 		D8C2C52629154212003E5C2C /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2C52529154212003E5C2C /* Localizacao.swift */; };
 		D8C2C52829154369003E5C2C /* LocalizacaoConsultaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2C52729154369003E5C2C /* LocalizacaoConsultaAPI.swift */; };
+		D8C2C52D29157A36003E5C2C /* PickerViewMes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2C52C29157A36003E5C2C /* PickerViewMes.swift */; };
+		D8C2C52F2915883D003E5C2C /* PickerViewAno.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2C52E2915883D003E5C2C /* PickerViewAno.swift */; };
 		DCD993BAE9F08E32F0ADB9ED /* Pods_FormularioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78F2F73E51D6662E1349ECE /* Pods_FormularioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		D8C2C5222914248B003E5C2C /* ValidateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateForm.swift; sourceTree = "<group>"; };
 		D8C2C52529154212003E5C2C /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
 		D8C2C52729154369003E5C2C /* LocalizacaoConsultaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoConsultaAPI.swift; sourceTree = "<group>"; };
+		D8C2C52C29157A36003E5C2C /* PickerViewMes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewMes.swift; sourceTree = "<group>"; };
+		D8C2C52E2915883D003E5C2C /* PickerViewAno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewAno.swift; sourceTree = "<group>"; };
 		E78F2F73E51D6662E1349ECE /* Pods_FormularioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormularioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,9 +115,19 @@
 		D8C2C5212914243F003E5C2C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D8C2C52B29157A18003E5C2C /* Componentes */,
 				D8C2C50E2913FEE0003E5C2C /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8C2C52B29157A18003E5C2C /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				D8C2C52C29157A36003E5C2C /* PickerViewMes.swift */,
+				D8C2C52E2915883D003E5C2C /* PickerViewAno.swift */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,8 @@
 				D8C2C50B2913FEE0003E5C2C /* AppDelegate.swift in Sources */,
 				D8C2C50D2913FEE0003E5C2C /* SceneDelegate.swift in Sources */,
 				D8C2C5232914248B003E5C2C /* ValidateForm.swift in Sources */,
+				D8C2C52D29157A36003E5C2C /* PickerViewMes.swift in Sources */,
+				D8C2C52F2915883D003E5C2C /* PickerViewAno.swift in Sources */,
 				D8C2C52829154369003E5C2C /* LocalizacaoConsultaAPI.swift in Sources */,
 				D8C2C52629154212003E5C2C /* Localizacao.swift in Sources */,
 			);

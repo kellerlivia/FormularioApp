@@ -208,11 +208,17 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="92" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="textFieldMesEntrouEmFoco:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="FvL-Ke-fFx"/>
+                                                                        </connections>
                                                                     </textField>
                                                                     <textField opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ovw-CS-Rsl">
                                                                         <rect key="frame" x="94" y="0.0" width="92" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="textFieldAnoEntrouEmFoco:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="bhw-jE-Xpi"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -312,6 +318,7 @@
                     <connections>
                         <outlet property="buttonConfirm" destination="siz-H1-5nV" id="cUC-k1-HEu"/>
                         <outlet property="imageBanner" destination="OCY-2U-Eoh" id="084-M8-uYj"/>
+                        <outlet property="scrollViewPrincipal" destination="zVd-gr-jzq" id="hI2-66-cpv"/>
                         <outlet property="viewConfirmation" destination="fxl-E9-OlZ" id="1sJ-wI-mkr"/>
                         <outlet property="viewLogo" destination="La0-Xr-Trz" id="rLY-jR-yKs"/>
                         <outletCollection property="textFields" destination="Hq7-fE-oBO" collectionClass="NSMutableArray" id="E6X-l4-dqS"/>
