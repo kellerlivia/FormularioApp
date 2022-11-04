@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         let textFieldsAreValid = ValidateForm().checkTextFieldsValid(listOfTextFields: textFields)
         
         if textFieldsAreFilled && textFieldsAreValid {
-            let alert = ValidateForm().displaysFilledTextFieldsNotification(title: "Parabéns", message: "Compra realizada com suceso")
+            let alert = ValidateForm().displaysFilledTextFieldsNotification(title: "Parabéns", message: "Compra realizada com sucesso")
             present(alert, animated: true, completion: nil)
         } else {
             let alert = ValidateForm().displaysFilledTextFieldsNotification(title: "Atenção", message: "Preencha corretamente todos os campos")

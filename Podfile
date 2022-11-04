@@ -8,5 +8,6 @@ target 'FormularioApp' do
   # Pods for FormularioApp
   pod 'CPF-CNPJ-Validator'
   pod 'Alamofire'
+  pod "CreditCardValidator", '~> 0.5.2'
 
 end
