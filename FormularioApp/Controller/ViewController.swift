@@ -43,5 +43,32 @@ class ViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
+    
+    func buscaTextField(tipoDeTextField:TypesOfTextFields, completion:(_ textFieldSolicitado:UITextField) -> Void) {
+        for textField in textFields {
+            if let textFieldAtual = TypesOfTextFields(rawValue: textField.tag) {
+                if textFieldAtual == tipoDeTextField {
+                    completion(textField)
+                }
+            }
+        }
+    }
+    
+    
+    @IBAction func textFieldCepUpdateValue(_ sender: UITextField) {
+        LocalizacaoConsultaAPI().consultaViaCepAPI(cep: sender.text!, sucesso: { (localizacao) in
+            self.buscaTextField(tipoDeTextField: .endereco, completion: { (textFieldEndereco) in
+                textFieldEndereco.text = localizacao.logradouro
+            })
+            self.buscaTextField(tipoDeTextField: .bairro, completion: { (textFieldBairro) in
+                textFieldBairro.text = localizacao.bairro
+            })
+            
+        }) { (error) in
+            print(error)
+        }
+    }
+    
+    
 }
 

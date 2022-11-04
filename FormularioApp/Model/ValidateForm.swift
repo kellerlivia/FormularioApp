@@ -61,5 +61,4 @@ class ValidateForm: NSObject {
         
         return notification
     }
-
 }
