@@ -7,17 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoSelecionado {
+class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoSelecionado, PickerViewNumeroDeParcela {
     
     @IBOutlet weak var imageBanner: UIImageView!
     @IBOutlet weak var viewConfirmation: UIView!
     @IBOutlet weak var viewLogo: UIView!
     @IBOutlet weak var buttonConfirm: UIButton!
     @IBOutlet var textFields: [UITextField]!
+    @IBOutlet weak var labelParcela: UILabel!
     @IBOutlet weak var scrollViewPrincipal: UIScrollView!
     
     var pickerViewMes = PickerViewMes()
     var pickerViewAno = PickerViewAno()
+    var pickerViewParcela = PickerViewParcela()
+    
+    var precoDoIngresso: Double = 210.00
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +46,7 @@ class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoS
         
         pickerViewMes.delegate = self
         pickerViewAno.delegate = self
+        pickerViewParcela.delegate = self
     }
     
     @objc func aumentarScrollView(notification: Notification) {
@@ -101,7 +110,7 @@ class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoS
         pickerView.dataSource = pickerViewAno
         
         sender.inputView = pickerView
-
+        
     }
     
     func anoSelecionado(ano: String) {
@@ -109,5 +118,37 @@ class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoS
             textFieldAno.text = ano
         }
     }
+    
+    @IBAction func textFieldCodigoDeSeguranca(_ sender: UITextField) {
+        guard let texto = sender.text else { return }
+        
+        if texto.count > 3 {
+            let codigo = texto.suffix(3)
+            self.buscaTextField(tipoDeTextField: .codigoDeSeguranc) { textFieldCodigoDeSeguranca in
+                textFieldCodigoDeSeguranca.text = String(codigo)
+            }
+        } else {
+            self.buscaTextField(tipoDeTextField: .codigoDeSeguranc) { textFieldCodigoDeSeguranca in
+                textFieldCodigoDeSeguranca.text = texto
+            }
+        }
+    }
+    
+    @IBAction func textFieldParcelas(_ sender: UITextField) {
+        let pickerView = UIPickerView()
+        pickerView.delegate = pickerViewParcela
+        pickerView.dataSource = pickerViewParcela
+        
+        sender.inputView = pickerView
+    }
+    
+    func numeroDeParcela(parcela: String) {
+        self.buscaTextField(tipoDeTextField: .parcela) { textFieldParcela in
+            textFieldParcela.text = "\(parcela)x"
+            
+            let calculoDaParcela = "\(Double(precoDoIngresso)/Double(parcela)!)"
+            self.labelParcela.text = String(format: "%@x R$%@ (ou \(precoDoIngresso) à vista)", parcela, calculoDaParcela)
+        }
+    }
+    
 }
-
