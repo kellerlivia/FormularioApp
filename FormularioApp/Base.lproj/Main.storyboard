@@ -117,7 +117,16 @@
                                                 <rect key="frame" x="0.0" y="383.5" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="emailLabelValidar:" destination="BYZ-38-t0r" eventType="editingChanged" id="GRE-gv-oNn"/>
+                                                </connections>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite um e-mail válido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="093-tI-ukf">
+                                                <rect key="frame" x="0.0" y="421" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn6-c2-V26">
                                                 <rect key="frame" x="0.0" y="424.5" width="374" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
@@ -128,7 +137,16 @@
                                                 <rect key="frame" x="0.0" y="457" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="cpfLabelValidar:" destination="BYZ-38-t0r" eventType="editingChanged" id="FYA-Ee-ObZ"/>
+                                                </connections>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite um CPF válido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpF-nJ-B1u">
+                                                <rect key="frame" x="0.0" y="494.5" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrN-8S-uW3">
                                                 <rect key="frame" x="0.0" y="498" width="374" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
@@ -188,7 +206,16 @@
                                                 <rect key="frame" x="0.0" y="815" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="numeroLabelValidar:" destination="BYZ-38-t0r" eventType="editingChanged" id="AiM-YL-8HH"/>
+                                                </connections>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite um número válido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtj-nu-pyP">
+                                                <rect key="frame" x="0.0" y="852.5" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="12"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-G3-lXz">
                                                 <rect key="frame" x="0.0" y="856" width="374" height="59.5"/>
                                                 <subviews>
@@ -323,8 +350,11 @@
                     <size key="freeformSize" width="414" height="1172"/>
                     <connections>
                         <outlet property="buttonConfirm" destination="siz-H1-5nV" id="cUC-k1-HEu"/>
+                        <outlet property="cpfValidoLabel" destination="FpF-nJ-B1u" id="gmZ-2N-9Zj"/>
+                        <outlet property="emailValidoLabel" destination="093-tI-ukf" id="rrW-8D-Sri"/>
                         <outlet property="imageBanner" destination="OCY-2U-Eoh" id="084-M8-uYj"/>
                         <outlet property="labelParcela" destination="Els-ak-upa" id="mqM-Q9-YAa"/>
+                        <outlet property="numeroValidoLabel" destination="Xtj-nu-pyP" id="NTg-k1-y8W"/>
                         <outlet property="scrollViewPrincipal" destination="zVd-gr-jzq" id="hI2-66-cpv"/>
                         <outlet property="viewConfirmation" destination="fxl-E9-OlZ" id="1sJ-wI-mkr"/>
                         <outlet property="viewLogo" destination="La0-Xr-Trz" id="rLY-jR-yKs"/>

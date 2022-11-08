@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoSelecionado, PickerViewNumeroDeParcela {
     
+    @IBOutlet weak var numeroValidoLabel: UILabel!
+    @IBOutlet weak var cpfValidoLabel: UILabel!
+    @IBOutlet weak var emailValidoLabel: UILabel!
     @IBOutlet weak var imageBanner: UIImageView!
     @IBOutlet weak var viewConfirmation: UIView!
     @IBOutlet weak var viewLogo: UIView!
@@ -53,6 +56,11 @@ class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoS
         self.scrollViewPrincipal.contentSize = CGSize(width: self.scrollViewPrincipal.frame.width, height: self.scrollViewPrincipal.frame.height + 750)
     }
     
+    func cpfLabel() {
+        cpfValidoLabel.text = "Digite um CPF válido"
+        cpfValidoLabel.textColor = UIColor.red
+    }
+    
     @IBAction func buttonConfirm(_ sender: UIButton) {
         let textFieldsAreFilled = ValidateForm().checkTextFieldsFilled(textFields: textFields)
         let textFieldsAreValid = ValidateForm().checkTextFieldsValid(listOfTextFields: textFields)
@@ -84,9 +92,32 @@ class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoS
             self.buscaTextField(tipoDeTextField: .bairro, completion: { (textFieldBairro) in
                 textFieldBairro.text = localizacao.bairro
             })
-            
         }) { (error) in
             print(error)
+        }
+    }
+    
+    @IBAction func cpfLabelValidar(_ sender: UITextField) {
+        if ValidateForm().checkCpfFieldValid(listOfTextFields: textFields) {
+            self.cpfValidoLabel.isHidden = true
+        } else {
+            self.cpfValidoLabel.isHidden = false
+        }
+    }
+    
+    @IBAction func emailLabelValidar(_ sender: UITextField) {
+        if ValidateForm().checkEmailFieldValid(listOfTextFields: textFields) {
+            self.emailValidoLabel.isHidden = true
+        } else {
+            self.emailValidoLabel.isHidden = false
+        }
+    }
+    
+    @IBAction func numeroLabelValidar(_ sender: UITextField) {
+        if ValidateForm().checkNumeroCartaoFieldValid(listOfTextFields: textFields) {
+            self.numeroValidoLabel.isHidden = true
+        } else {
+            self.numeroValidoLabel.isHidden = false
         }
     }
     
@@ -150,5 +181,4 @@ class ViewController: UIViewController, PickerViewMesSelecionado, PickerViewAnoS
             self.labelParcela.text = String(format: "%@x R$%@ (ou \(precoDoIngresso) à vista)", parcela, calculoDaParcela)
         }
     }
-    
 }
